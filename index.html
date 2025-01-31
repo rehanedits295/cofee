@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+        }
+        ul li {
+            margin: 0 15px;
+        }
+        ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        ul li a:hover {
+            color: #f39c12;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('cafe-bg.jpg') no-repeat center center/cover;
+            animation: fadeIn 2s ease-in;
+        }
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #f39c12;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #d35400;
+        }
+        .menu-section {
+            padding: 100px 20px;
+            text-align: center;
+        }
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .item {
+            background: #34495e;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .item:hover {
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+            ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            ul li {
+                margin: 10px 0;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .btn {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+            .menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Luxury Cafe</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to Luxury Cafe</h1>
+        <p>Experience the best coffee and delicacies in town</p>
+        <a href="#menu" class="btn">Explore Menu</a>
+    </section>
+    
+    <section id="menu" class="menu-section">
+        <h2>Our Special Menu</h2>
+        <div class="menu-items">
+            <div class="item">Espresso</div>
+            <div class="item">Cappuccino</div>
+            <div class="item">Latte</div>
+            <div class="item">Mocha</div>
+            <div class="item">French Toast</div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
